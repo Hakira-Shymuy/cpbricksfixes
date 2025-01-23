@@ -1,0 +1,7 @@
+bin/
+vendor/bin/
+composer.json
+composer.lock
+phpstan.neon
+phpstan-baseline.neon
+phpstan-bootstrap.php
