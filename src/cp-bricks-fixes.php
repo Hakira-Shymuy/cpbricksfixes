@@ -9,7 +9,7 @@
  * Plugin Name:       CP Bricks Fixes
  * Plugin URI:        https://github.com/Hakira-Shymuy/cpbricksfixes
  * Description:       Some compatibility fixes for Bricks Builder in ClassicPress.
- * Version:           0.0.1
+ * Version:           1.0.0
  * Requires at least: 5.9
  * Requires PHP:      7.3
  * Author:            Hakira Shymuy
