@@ -5,3 +5,4 @@ composer.lock
 phpstan.neon
 phpstan-baseline.neon
 phpstan-bootstrap.php
+readme.md
