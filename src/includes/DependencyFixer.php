@@ -118,16 +118,6 @@ class DependencyFixer {
 			);
 		}
 
-		if ( ! wp_script_is( 'media-audiovideo', 'enqueued' ) ) {
-			wp_enqueue_script(
-				'media-audiovideo',
-				includes_url( 'js/media-audiovideo.min.js' ),
-				array( 'media-editor' ),
-				get_bloginfo( 'version' ),
-				true
-			);
-		}
-
 		if ( ! wp_script_is( 'wp-api', 'enqueued' ) ) {
 			wp_enqueue_script( 'wp-api' );
 			wp_add_inline_script(
