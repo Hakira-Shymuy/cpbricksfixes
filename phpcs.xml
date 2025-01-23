@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<ruleset name="CP Bricks Fixes">
+    <description>CP Bricks Fixes Coding Standards</description>
+
+    <!-- Scan all files in directory -->
+    <file>.</file>
+
+    <!-- Scan only PHP files -->
+    <arg name="extensions" value="php"/>
+
+    <!-- Exclude the Composer Vendor directory. -->
+	<exclude-pattern>/vendor/*</exclude-pattern>
+
+	<!-- Exclude the Node Modules directory. -->
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+
+	<!-- Exclude stubs -->
+	<exclude-pattern>/stubs/*</exclude-pattern>
+
+	<!-- Exclude the Dist directory. -->
+	<exclude-pattern>/dist/*</exclude-pattern>
+
+    <!-- Show sniff codes in all reports -->
+    <arg value="ns"/>
+
+    <rule ref="WordPress"/>
+    <rule ref="WordPress-Core">
+        <!-- With this enabled, phpcbf adds a comma after every array item, breaking PHP 7.2 compatibility -->
+        <exclude name="WordPress.Arrays.CommaAfterArrayItem.NoComma"/>
+    </rule>
+
+    <rule ref="WordPress-Extra">
+        <!-- let me break file naming convention -->
+        <exclude name="WordPress.Files.FileName"/>
+        <!-- let me break variable naming convention -->
+        <exclude name="WordPress.NamingConventions.ValidVariableName"/>
+    </rule>
+
+    <!-- Let's also check that everything is properly documented. -->
+    <rule ref="WordPress-Docs"/>
+
+    <!-- Add in some extra rules from other standards. -->
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+    <rule ref="Generic.Commenting.Todo"/>
+
+	<!-- Run against the PHPCompatibility ruleset -->
+    <rule ref="PHPCompatibility"/>
+	<!-- Check for cross-version support for PHP 7.3 and higher. -->
+    <config name="testVersion" value="7.3-"/>
+
+	<!-- Run against the Security ruleset -->
+	<rule ref="Security"/>
+
+    <config name="minimum_supported_wp_version" value="5.5"/>
+</ruleset>

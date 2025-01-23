@@ -1,0 +1,15 @@
+{
+    "devDependencies": {
+        "eslint": "^9.15.0",
+        "husky": "^9.1.7"
+    },
+    "scripts": {
+        "build": "npm run lint && npm run test && npm run build:zip",
+        "build:zip": "./bin/build-zip.sh",
+        "composer": "cd src && composer",
+        "phpcs": "./src/vendor/bin/phpcs --standard=phpcs.xml ./src",
+        "phpcbf": "./src/vendor/bin/phpcbf --standard=phpcs.xml ./src",
+        "phpstan": "./src/vendor/bin/phpstan analyse",
+        "prepare": "husky"
+    }
+}

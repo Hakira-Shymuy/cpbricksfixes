@@ -1,0 +1,13 @@
+
+includes:
+	- phpstan-baseline.neon
+
+parameters:
+	level: 0
+	paths:
+		- src/
+	excludePaths:
+		- src/vendor
+	scanFiles:
+	stubFiles:
+		- vendor/php-stubs/wordpress-stubs/wordpress-stubs.php

@@ -1,0 +1,29 @@
+{
+    "version": "0.2",
+    "ignorePaths": [
+        "vendor/*",
+        "node_modules/*",
+        "composer.lock",
+        "composer.json",
+        "package-lock.json",
+        "package.json",
+        "*.code-workspace",
+        ".gitignore",
+        "phpstan.neon"
+    ],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "ABSPATH",
+        "audiovideo",
+        "cpbf",
+        "Hakira",
+        "mediaelement",
+        "phpcbf",
+        "phpstan",
+        "plupload",
+        "Shymuy"
+    ],
+    "ignoreWords": [],
+    "import": []
+}
